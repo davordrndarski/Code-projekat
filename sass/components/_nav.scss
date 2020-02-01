@@ -1,0 +1,110 @@
+
+.nav li:last-child {
+	a {
+		border: 1px solid;
+		padding: 10px 65px;
+		border-radius: 7px; 
+	}
+}
+
+.nav li {
+	display: inline-block;
+	a {
+		text-transform: uppercase;
+		font-family: 'NunitoSans-Bold';
+		padding-right: 50px;
+		color: $light-gray-color;
+		&:hover {
+			color: $dark-gray-color;
+		}
+	}
+	.active {
+		color: $dark-gray-color;
+	}
+}
+
+/* Nav button */
+
+.toggle-menu {
+  display: none;
+  width: 28px;
+  height: 28px;
+  margin-top: 8px;
+}
+.toggle-menu span:after, .toggle-menu span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+}
+.toggle-menu span:after {
+  top: 18px;
+}
+.toggle-menu span {
+  position: relative;
+  display: block;
+}
+.toggle-menu span, .toggle-menu span:after, .toggle-menu span:before {
+  width: 100%;
+  height: 2px;
+  background-color: $white-color;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+.toggle-menu.on span {
+  background-color: transparent;
+}
+.toggle-menu.on span:before {
+  transform: rotate(45deg) translate(-1px, 0px);
+}
+.toggle-menu.on span:after {
+  transform: rotate(-45deg) translate(6px, -7px);
+}
+
+
+
+/* NAV RESPONSIVE */
+
+@media only screen and (max-width: 992px) {
+	.toggle-menu {
+	  display: block;
+	}
+	nav {
+		display: none;
+		width: 100%;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		background: #000;
+		opacity: 0.95;
+		li {
+			width: 100%;
+			text-align: center;
+			a {
+				padding: 20px;
+				display: inline-block;
+			}
+		}
+		.nav {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.nav li:last-child a {
+	    padding: 10px 50px;
+	}
+	.nav li a {
+		padding-right: 25px;
+	}
+}
+
+
+ 

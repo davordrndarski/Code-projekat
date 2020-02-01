@@ -1,0 +1,30 @@
+header {
+	@include transition (all, 0.3s);
+	padding: 50px 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 6;
+	.logo {
+		background: #404040;
+		width: 240px;
+		text-align: center;
+		font-family: 'NunitoSans-Light';
+		color: $white-color;
+		padding: 30px;
+		border-radius: 5px;
+	}
+}
+
+.header_scroll {
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 20px;
+}
+
+/* HEADER RESPONSIVE */
+
+@media only screen and (max-width: 992px) {
+	header {
+		padding: 20px 0;
+	}
+}

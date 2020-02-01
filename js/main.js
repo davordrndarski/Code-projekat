@@ -71,8 +71,7 @@ $('.scrollToTop').click(function(){
   $('html, body').animate({scrollTop: 0},800);
 });
 
-// Slide down
-
+// Slide down button
 
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
@@ -84,7 +83,7 @@ $(function() {
     });
 });
 
-// Active btn
+// Active btn in nav
 
 $(".nav li a").click(function(){
   $(".nav li a").removeClass("active");
@@ -92,7 +91,7 @@ $(".nav li a").click(function(){
 });
 
 
-// Video play
+// Video play button
 
 function initializeControls(container, video) {
     // Initialize play button
